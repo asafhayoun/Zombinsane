@@ -1,5 +1,4 @@
 schedule function zombie:apocalypse 30s
-execute unless entity @e[type=minecraft:wandering_trader,tag=zomb_trade] as @e[type=minecraft:wandering_trader,limit=2] run function zombie:trader
 tellraw @a {"text": "Hello!", "bold": true}
 scoreboard objectives add respawn trigger
 scoreboard players enable @a respawn
