@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "xpPatcherUnlocked": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "zombie:xp_patcher"
+      }
+    }
+  },
+  "rewards": {
+    "function": "zombie:craft_xp_patcher"
+  }
+}
