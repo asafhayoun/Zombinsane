@@ -1,0 +1,4 @@
+replaceitem entity @s weapon netherite_sword{Enchantments:[{id:"minecraft:smite",lvl:250},{id:"minecraft:sweeping",lvl:10}],Unbreakable:1b,display:{Name:'{"text": "Zomb Sword VI","color": "#ff55ff","bold": true,"italic": false}'},AttributeModifiers:[{Name:"prey",AttributeName:"minecraft:generic.follow_range",Operation:0,Amount:256,Slot:"mainhand",UUID:[I;255,1,0,0]},{Name:"hasServants",AttributeName:"minecraft:generic.attack_speed",Amount:4,Operation:2,Slot:"mainhand",UUID:[I;255,1,0,2]},{Name:"lord",Amount:20,AttributeName:"minecraft:generic.max_health",Operation:0,Slot:"mainhand",UUID:[I;255,1,0,3]}],zomb_lvl:6}
+
+execute unless score @s zomb_level matches 6 run scoreboard players remove @s several_zomb 2048
+scoreboard players set @s zomb_level 6
