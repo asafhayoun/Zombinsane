@@ -1,5 +1,3 @@
-execute as @a[tag=!zombie_loaded] run function zombie:load_player
-
 execute as @a[scores={zomb_level=1}] at @s run function zombie:levels/1
 execute as @a[scores={zomb_level=2}] at @s run function zombie:levels/2
 execute as @a[scores={zomb_level=3}] at @s run function zombie:levels/3
@@ -11,6 +9,11 @@ tellraw @a[scores={when_died=1..}] [{"text": "Lost your sword? "}, {"text": "CLI
 
 execute unless entity @e[type=minecraft:wandering_trader,tag=zomb_trade] as @e[type=minecraft:wandering_trader,limit=2] run function zombie:trader
 
+execute as @a[scores={item_used=1..},nbt={SelectedItem:{tag:{xp_patcher:1b}}}] at @s run function zombie:items/xp_patcher/use
+execute as @a[scores={item_used=1..},nbt={Inventory:[{Slot:-106b,tag:{xp_patcher:1b}}]}] at @s run function zombie:items/xp_patcher/use
+function zombie:items/xp_patcher/tick
+
 scoreboard players set @a when_died 0
 scoreboard players set @a respawn 0
 scoreboard players enable @a respawn
+scoreboard players set @a item_used 0
